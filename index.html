@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>康复智学 - 康复训练学习系统</title>
+<style>
+body{
+    font-family: Arial;
+    background:#0f172a;
+    color:#e2e8f0;
+    text-align:center;
+    padding:40px;
+}
+.container{
+    max-width:800px;
+    margin:auto;
+}
+button{
+    margin:10px;
+    padding:12px 24px;
+    border:none;
+    border-radius:10px;
+    background:#6366f1;
+    color:white;
+    cursor:pointer;
+}
+.card{
+    margin-top:20px;
+    padding:20px;
+    background:#1e293b;
+    border-radius:12px;
+}
+</style>
+</head>
+<body>
+
+<div class="container">
+<h1>🧘 康复智学</h1>
+<p>选择一个康复训练开始学习</p>
+
+<button onclick="start('肩关节康复')">肩关节</button>
+<button onclick="start('膝关节康复')">膝关节</button>
+<button onclick="start('腰背训练')">腰背</button>
+
+<div class="card" id="result" style="display:none;"></div>
+</div>
+
+<script>
+function start(type){
+    const box = document.getElementById('result');
+    box.style.display='block';
+    box.innerHTML = `
+        <h2>${type}</h2>
+        <p>推荐动作：基础康复训练</p>
+        <p>训练次数：每天 3 组 × 10 次</p>
+        <p>注意事项：动作缓慢，避免疼痛</p>
+    `;
+}
+</script>
+
+</body>
+</html>
